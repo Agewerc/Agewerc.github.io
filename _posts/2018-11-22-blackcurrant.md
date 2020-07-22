@@ -5,7 +5,7 @@ author: John Doe
 pay-link: https://rzp.io/l/blackcurrant-theme
 categories:
   - projects
-layout: post
+layout: defaultpost
 ---
 
 <small>Image Credits:<a href="https://www.fruitlayer.com"> Fruit Layer</a></small>

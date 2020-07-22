@@ -7,7 +7,6 @@ author: Alan Gewerc
 categories:
     - work
     - projects
-
 ---
 <br>
 Find the detailed code and more about bootstrap in my [github](https://github.com/Agewerc/Bootstrap/tree/master)<br>
