@@ -8,7 +8,7 @@ categories:
   - Finance
   - Machine Learning
   - Deep learning
-layout: post
+layout: defaultpost
 ---
 
 
