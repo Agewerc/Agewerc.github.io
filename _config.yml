@@ -19,18 +19,6 @@ buy-link:
 # For more customizations, go to  _data/main.yml
 
 
-body{
-    zoom: 0.9;
-    transform: scale(0.9);
-    transform-origin: 0 0;
-    -webkit-transform: scale(0.9);
-    -webkit-transform-origin: 0 0;
-    -moz-transform: scale(0.9);
-    -moz-transform-origin: 0 0;
-    -o-transform: scale(0.9);
-    -o-transform-origin: 0 0;
-}
-
 # Kramdown is the default markdown processor used. It is supported by Github.
 markdown: kramdown
 
