@@ -1,0 +1,20 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+description: These are the projects I have worked on.
+---
+
+{% for item in site.projects %}
+<a href="{{item.github}}" class="nostyle"  target="_blank">
+	<div class="row work cards borders" data-aos="fade-up">
+		<div class="col-md-6 work-ind" >
+			<div class="work-image" style="background-image: url({{item.image}})"></div>
+		</div>
+		<div class="col-md-6 details">
+			<h1 class="double-u">{{item.title}}</h1>
+			<p>{{item.description | truncate: 120}}</p>
+		</div>
+		</div>
+</a>
+{% endfor %}

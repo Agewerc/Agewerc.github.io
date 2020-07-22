@@ -1,0 +1,53 @@
+[
+
+{
+"category": "work, projects",
+"title": "Bootstrap to Quantify Uncertainty",
+"description": "Find the detailed code and more about bootstrap in my githubIntroduction to B...",
+"url": "/blog/Bootstrap-to-Quantify-Uncertainty/",
+"image": "/assets/images/bootstrap_inf.png",
+"author": "Alan Gewerc"
+}
+,
+
+{
+"category": "work, projects",
+"title": "An Algorithm for a Dog Identification App",
+"description": "In this notebook, some template code has already been provided for you, and y...",
+"url": "/blog/dog/",
+"image": "/assets/images/anthony-tori-102062.jpg",
+"author": "Alan Gewerc"
+}
+,
+
+{
+"category": "projects",
+"title": "Blackcurrant Jekyll Theme",
+"description": "Image Credits: Fruit LayerBlackcurrant is a Jekyll theme suitable for persona...",
+"url": "/blog/blackcurrant/",
+"image": "/assets/images/blackcurrant.jpg",
+"author": "John Doe"
+}
+,
+
+{
+"category": "Data Science, Finance, Machine Learning, Deep learning",
+"title": "Corporate Credit Rating Forecasting",
+"description": "IntroductionThis notebook contains the results of the data analysis performed...",
+"url": "/blog/corporateCreditRatingPrediction/",
+"image": "/assets/images/finance.jpg",
+"author": "Alan Gewerc"
+}
+,
+
+{
+"category": "Clustering, projects",
+"title": "Expectation Maximization for News Clustering",
+"description": "Image source: SklearnIntroduction to ClusteringData clustering is the most co...",
+"url": "/blog/EM-Clustering/",
+"image": "/assets/images/cluster.png",
+"author": "Alan Gewerc"
+}
+
+
+]
