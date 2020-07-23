@@ -2,7 +2,7 @@
 title: Recommender system using Pyspark (ALS algorithm)
 date:   2020-07-16 20:12:00 +1000
 layout: post
-image: //assets/images//images/bootstrap_inf.png
+image: /assets/images/recommendation.JPG
 author: Alan Gewerc
 categories:
     - work
@@ -15,7 +15,7 @@ More recently, recommender systems have become more diffuse and are not limited 
 <br><br>
 The benefits of usign such systems are huge, as described [here](https://towardsdatascience.com/5-advantages-recommendation-engines-can-offer-to-businesses-10b663977673), [here](https://medium.com/@triconinfotech/improving-customer-engagement-with-recommender-systems-b423bdbb4e55) and [here](https://neoteric.eu/blog/how-to-boost-sales-with-a-recommender-system/).  In a nutshell, it can drive traffic, deliver personalized content, enhance customer engagement, increase sales and much more. <br>
 
-![/assets/images/](/assets/images//recommendation.JPG)
+![image1](/assets/images/recommendation.JPG)
 
 The architecture of the recommendation engine is dependent on the business domain and the attributes of the dataset at one's disposal. For instance, customers on Ebay frequently provide ratings for products scaling on 1 (unhappy) to 5 (very happy). Spotfy hold information of the gender of music one listens to. Uber eats should know what is your favorite type of food. Istagram has user patterns of likes in images. Such data sources document interactions between users and products (items). In addition, the platform may access personal information from users, such as their location, age, sex and so on. Not to mention the complete metadata of their items.
 
@@ -166,7 +166,7 @@ plt.style.use('seaborn-white')
 
 
 
-![png](/assets/images//Recommender-System_12_1.png)
+![png](/assets/images/Recommender-System_12_1.png)
 
 
 Quite generous public from Toronto. Most ratings are above 3. Now lets see the the distrubtion of ratings of each restaurants. 
@@ -186,7 +186,7 @@ plt.style.use('seaborn-white')
 ```
 
 
-![png](/assets/images//Recommender-System_14_0.png)
+![png](/assets/images/Recommender-System_14_0.png)
 
 
 Here were see a more normally distributed curve. Nevertheless most restaurants do pretty well.
