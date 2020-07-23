@@ -44,7 +44,7 @@ social:
        link: "mailto: alangewerc@gmail.com"
 
   twitter:
-      icon: fab fa-kaggle
+      icon: #20BEFF
       link: https://www.kaggle.com/agewerc
 
   linkedin:
