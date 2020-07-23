@@ -44,7 +44,7 @@ social:
        link: "mailto: alangewerc@gmail.com"
 
   twitter:
-      icon: |<span class="iconify" data-icon="simple-icons:kaggle" data-inline="false"></span>
+      icon: 
       link: https://www.kaggle.com/agewerc
 
   linkedin:
