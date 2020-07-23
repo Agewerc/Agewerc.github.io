@@ -42,7 +42,7 @@ menu:
 social:
   facebook:
        icon: fa-envelope
-       link: alangewerc@gmail.com
+       link: "mailto: alangewerc@gmail.com"
 
   twitter:
       icon: fab fa-kaggle
