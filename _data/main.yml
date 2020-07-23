@@ -40,11 +40,11 @@ menu:
 # Social icons in the sidebar
 # use font awesome icon code in the 'icon:' value
 social:
-  email:
+  facebook:
        icon: fa-envelope
        link: alangewerc@gmail.com
 
-  kaggle:
+  twitter:
       icon: fab fa-kaggle
       link: https://www.kaggle.com/agewerc
 
