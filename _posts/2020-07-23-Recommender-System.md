@@ -7,6 +7,7 @@ author: Alan Gewerc
 categories:
     - work
     - projects
+---
 
 ## Introduction
 
@@ -14,9 +15,6 @@ Recommender Systems are algorithms designed to make suggestions of items to user
 More recently, recommender systems have become more diffuse and are not limited to big tech companies but virtually every company can create its own system (with the right dataset). 
 <br><br>
 The benefits of usign such systems are huge, as described [here](https://towardsdatascience.com/5-advantages-recommendation-engines-can-offer-to-businesses-10b663977673), [here](https://medium.com/@triconinfotech/improving-customer-engagement-with-recommender-systems-b423bdbb4e55) and [here](https://neoteric.eu/blog/how-to-boost-sales-with-a-recommender-system/).  In a nutshell, it can drive traffic, deliver personalized content, enhance customer engagement, increase sales and much more. <br>
-
-![image1](/assets/images/recommendation.JPG)
-
 The architecture of the recommendation engine is dependent on the business domain and the attributes of the dataset at one's disposal. For instance, customers on Ebay frequently provide ratings for products scaling on 1 (unhappy) to 5 (very happy). Spotfy hold information of the gender of music one listens to. Uber eats should know what is your favorite type of food. Istagram has user patterns of likes in images. Such data sources document interactions between users and products (items). In addition, the platform may access personal information from users, such as their location, age, sex and so on. Not to mention the complete metadata of their items.
 
 There are three especially commom methods to design a recommender system. `Collaborative Filtering`, `Content-based Filtering` and `hybrid techniques`. Content-based systems aims to make recommendation based on some previous information about the customer and the products. For instance if Netflix knows you like drama movies it might recommend you movies of this gender. However, in a collaborative filtering approach it might simply ignore the gender of the movie. The features used in this case are exclusevely users rating patterns. For instance if you whatched 5 different series on Netflix and have rated 5 each of them, just like some other random user, than you might be interested to know what else he was rated as 5 stars. Hybrid systems make use of both techniques. 
@@ -228,7 +226,7 @@ plt.show()
 ![png](/assets/images/Recommender-System_18_0.png)
 
 
-> ## Convert String to index
+## Convert String to index
 
 Before starting the modelling process we must convert all columns that will be used in the model to integer. This is compulsory for the ALS model from pyspark.  The columns that need to be converted are the `business_id` and `user_id`. 
 
