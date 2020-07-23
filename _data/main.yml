@@ -44,8 +44,8 @@ social:
        icon: fa-envelope
        link: alangewerc@gmail.com
 
-  twitter:
-      icon: fa-kaggle
+  kaggle:
+      icon: fab fa-kaggle
       link: https://www.kaggle.com/agewerc
 
   linkedin:
