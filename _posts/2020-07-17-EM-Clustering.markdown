@@ -1,5 +1,5 @@
 ---
-title: Expectation Maximization for News Clustering
+title: Expectation-Maximization for News Clustering
 image: /assets/images/cluster.png
 date: November 2018
 author: Alan Gewerc
@@ -13,11 +13,11 @@ layout: post
 <br>
 ### Introduction to Clustering
 
-Data clustering is the most commom form of [unsupervised learning](https://en.wikipedia.org/wiki/Unsupervised_learning). The primary goal of unsupervised learning is to detect patterns in unlabeled data, which means there are no previous targets to forecasted. Clustering algorithms are useful for several tasks such as anomaly detection, customer segmentation, Insurance Fraud Detection and so on. Some of the most popular clustering algorithms developed are [Center-based](https://epubs.siam.org/doi/abs/10.1137/1.9780898718348.ch9?mobileUi=0) partitioning (e.g., KMeans), [density-based](https://en.wikipedia.org/wiki/Cluster_analysis#Density-based_clustering) clustering (e.g., DBSCAN), [hierarchical](https://en.wikipedia.org/wiki/Hierarchical_clustering) clustering, and [graphbased](http://www.slideshare.net/ssakpi/graph-based-clustering) clustering. 
+Data clustering is the most common form of [unsupervised learning](https://en.wikipedia.org/wiki/Unsupervised_learning). The primary goal of unsupervised learning is to detect patterns in unlabeled data, which means there are no previous targets to forecasted. Clustering algorithms are useful for several tasks such as anomaly detection, customer segmentation, Insurance Fraud Detection and so on. Some of the most popular clustering algorithms developed are [Center-based](https://epubs.siam.org/doi/abs/10.1137/1.9780898718348.ch9?mobileUi=0) partitioning (e.g., KMeans), [density-based](https://en.wikipedia.org/wiki/Cluster_analysis#Density-based_clustering) clustering (e.g., DBSCAN), [hierarchical](https://en.wikipedia.org/wiki/Hierarchical_clustering) clustering, and [graphbased](http://www.slideshare.net/ssakpi/graph-based-clustering) clustering. 
 <br>
 
 From [geeksforgeeks](https://www.geeksforgeeks.org/clustering-in-machine-learning/) <br>
-*Clustering is very much important as it determines the intrinsic grouping among the unlabeled data present. There are no criteria for a good clustering. It depends on the user, what is the criteria they may use which satisfy their need. For instance, we could be interested in finding representatives for homogeneous groups (data reduction), in finding “natural clusters” and describe their unknown properties (“natural” data types), in finding useful and suitable groupings (“useful” data classes) or in finding unusual data objects (outlier detection). This algorithm must make some assumptions which constitute the similarity of points and each assumption make different and equally valid clusters."*
+*Clustering is very important as it determines the intrinsic grouping among the unlabeled data present. There are no predefined rules to judge what is good clustering. It depends on the user, what is the criteria they may use which satisfy their need. For instance, we could be interested in finding representatives for homogeneous groups (data reduction), in finding "natural clusters" and describe their unknown properties ("natural" data types), in finding useful and suitable groupings ("useful" data classes) or in finding unusual data objects (outlier detection). This algorithm must make some assumptions which constitute the similarity of points, and each assumption make different and equally valid clusters."*
 
 Here is an intuitive example of how clustering works:
 
@@ -25,22 +25,22 @@ Here is an intuitive example of how clustering works:
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-From this image we can understand how clustering works. We will choose different attributes from our data points. In this image family, place, gender  are used to create clusters. Other possibilities could be considered. We will always make numerical manipulations of our points according to the features we have from the data. <br>
+From this image, we can understand how clustering works. We will choose different attributes from our data points. In this image family, place and gender are used to create clusters. Other possibilities could be considered. We will always make numerical manipulations of our points according to the features we have from the data. <br>
 
 ### Expectation Maximization for Clustering <br>
 
 The approach we will follow for EM in this project follows the work developed by professor [Gholamreza Haffari](http://users.monash.edu.au/~gholamrh/) from Monash University. 
 
-In  this project we will cluster news from the BBC dataset. There are 2225 articles, each labeled under one of 5 categories: business, entertainment, politics, sport or tech. However, we are not interested in the labels as we will be applying an unsupervised technique. We will use the Expectation Maximization algorithm. 
+In this project, we will cluster news from the BBC dataset. There are 2225 articles; each labelled under one of 5 categories: business, entertainment, politics, sport or tech. However, we are not interested in the labels as we will be applying an unsupervised technique. We will use the Expectation-Maximization algorithm. 
 
 From [rapidminer](https://docs.rapidminer.com/latest/studio/operators/modeling/segmentation/expectation_maximization_clustering.html)<br>
-<i>The EM (expectation maximization) technique is similar to the K-Means technique. The basic operation of K-Means clustering algorithms is relatively simple: Given a fixed number of k clusters, assign observations to those clusters so that the means across clusters (for all variables) are as different from each other as possible. The EM algorithm extends this basic approach to clustering in two important ways:
+<i>The EM (expectation-maximization) technique is similar to the K-Means technique. The basic operation of K-Means clustering algorithms is relatively simple: Given a fixed number of k clusters, assign observations to those clusters so that the means across clusters (for all variables) are as different from each other as possible. The EM algorithm extends this basic approach to clustering in two important ways:
 <br>
 - Instead of assigning examples to clusters to maximize the differences in means for continuous variables, the EM clustering algorithm computes probabilities of cluster memberships based on one or more probability distributions. The goal of the clustering algorithm then is to maximize the overall probability or likelihood of the data, given the (final) clusters.
 <br>
-- The basic approach and logic of this clustering method is as follows. Suppose you measure a single continuous variable in a large sample of observations. Further, suppose that the sample consists of two clusters of observations with different means (and perhaps different standard deviations); within each sample, the distribution of values for the continuous variable follows the normal distribution. The goal of EM clustering is to estimate the means and standard deviations for each cluster so as to maximize the likelihood of the observed data (distribution). Put another way, the EM algorithm attempts to approximate the observed distributions of values based on mixtures of different distributions in different clusters.
+- The basic approach and logic of this clustering method are as follows. Suppose you measure a single continuous variable in a large sample of observations. Further, suppose that the sample consists of two clusters of observations with different means (and perhaps different standard deviations); within each sample, the distribution of values for the continuous variable follows the normal distribution. The goal of EM clustering is to estimate the means and standard deviations for each cluster to maximize the likelihood of the observed data (distribution). Put another way, the EM algorithm attempts to approximate the observed distributions of values based on mixtures of different distributions in different clusters.
 <br>
-- The results of EM clustering are different from those computed by k-means clustering. The latter will assign observations to clusters to maximize the distances between clusters. The EM algorithm does not compute actual assignments of observations to clusters, but classification probabilities. In other words, each observation belongs to each cluster with a certain probability. Of course, as a final result you can usually review an actual assignment of observations to clusters, based on the (largest) classification probability.
+- The results of EM clustering are different from those computed by k-means clustering. The latter will assign observations to clusters to maximize the distances between clusters. The EM algorithm does not compute actual assignments of observations to clusters, but classification probabilities. In other words, each observation belongs to each cluster with a certain probability. Of course, as a final result, you can usually review an actual assignment of observations to clusters, based on the (largest) classification probability.
 
 *An image from the Ardian Umam* [blog](https://ardianumam.wordpress.com/2017/11/07/how-em-expectation-maximization-method-works-for-clustering/)<br>
 <img src="/assets/images/em2.png" alt="drawing" width="500" height="300" >
@@ -75,7 +75,7 @@ library(tm) # text mining library
 <br><br>
 ## Expectation Maximization Math for Document Clustering<br>
 
-We firt derive the Expectation and Maximization steps of the **hard-EM** algorithm for Document Clustering:
+We first derive the Expectation and Maximization steps of the **hard-EM** algorithm for Document Clustering:
 
 In **Expectation** and **Maximization** steps we have incomplete data, i.e., the documents clusters are not given to us so the latent variables $$ {z_1, z_2, ... , z_N} $$ are unseen.
    
@@ -106,7 +106,7 @@ Thus, the EM Algorithm to learn the parameters and find the best values for the 
 
 1) Choose an initial setting for the parameters $\theta^{old} := (\varphi^{old},\mu_1^{old},...,\mu_K^{old})$  
 
-In the case of **hard-EM algorithm**, each data is assignment to one class with the largest posterior probability. Thus:  
+In the case of **hard-EM algorithm**, each data is assigned to the class with the largest posterior probability. Thus:  
 $$ Z^{*} = argmax_z\ \gamma (z_{n,k})= argmax_z\ p(z_{n,k}=1|d_n,\theta^{old})$$
 
 And there is no expectation in over the latent variables in the definition of the $\mathcal{Q}$ function. Thus:
@@ -130,7 +130,7 @@ what setting the partial derivatives to zero leads to the following solutions fo
 
 3) $$\theta^{old}\leftarrow \theta^{new}$$
 
-Implementation of the Hard-EM (derived above) and soft-EM for document clustering.
+Implementation of the Hard-EM (derived above) and Soft-EM for Document Clustering.
 
 
 #### Helper Function
@@ -162,7 +162,7 @@ initial.param <- function(vocab_size, K=4, seed=123456){
 
 ### E-Step for Document Clustering 
 
-We now use a function to perform the E-step iteraction. Some information about the parameters of the function:
+We now use a function to perform the E-step iteration. Some information about the parameters of the function:
 
 **Inputs:**
    - `gamma`:  the matrix of posterior probabilities NxK
@@ -325,11 +325,11 @@ EM <- function(counts, K=4, max.epoch=10, seed=123456, soft = TRUE){
 
 **Inputs:**
    - `file.name`: name of the input .txt file
-   - `spr.ratio`: is used to reduce the sparcity of data by removing very infrequent words
+   - `spr.ratio`: is used to reduce the sparsity of data by removing very infrequent words
    
 **Outputs:**
-   - `docs`: the unlabled corpus (each row is a document)
-   - `word.doc.mat`: the count matrix (each rows and columns corresponds to words and documents, respectively)
+   - `docs`: the unlabeled corpus (each row is a document)
+   - `word.doc.mat`: the count matrix (rows and columns corresponds to words and documents, respectively)
    - `label`: the real cluster labels (will be used in visualization/validation and not for clustering)
 
 
@@ -409,24 +409,9 @@ brand|7|0|0|0|...
 #  run soft-EM algorithm on the provided data
 res_soft <- EM(counts, K=5, max.epoch=10, seed = 200)  
 # visualization
-## find the culster with the maximum probability (since we have soft assignment here)
+## find the cluster with the maximum probability (since we have soft assignment here)
 label.hat.soft <- apply(res_soft$gamma, 1, which.max)
 ```
-
-    [1] 3049919
-    [1] 2713476
-    [1] 2667142
-    [1] 2645417
-    [1] 2635238
-    [1] 2628601
-    [1] 2624423
-    [1] 2622443
-    [1] 2621742
-    [1] 2621387
-    [1] 2621310
-    
-
-
 ```R
 #  run soft-EM algorithm on the provided data
 res_hard <- EM(counts, K=4, max.epoch=10, soft = FALSE, seed = 200)  
@@ -434,20 +419,6 @@ res_hard <- EM(counts, K=4, max.epoch=10, soft = FALSE, seed = 200)
 ## find the choosen cluster (since we have hard assignment here)
 label.hat.hard <- res_hard$k_max
 ```
-
-    [1] 3053548
-    [1] 2720130
-    [1] 2686664
-    [1] 2670998
-    [1] 2657195
-    [1] 2651093
-    [1] 2649465
-    [1] 2648918
-    [1] 2648824
-    [1] 2648763
-    [1] 2648748
-    
-
 # Visualizing Clusters With PCA
 We normalize the count matrix for better visualization.
 
@@ -489,7 +460,7 @@ textcluster.viz(t(counts), data$labels, 'True Labels')
 ## Now judge for yourself
 
 Are these good clusters? 
-Lets have a look in a few examples and see if it makes sense.
+Let's have a look in a few examples and see if it makes sense.
 
 ```
 library(wordcloud)
@@ -535,12 +506,3 @@ W4 <- wordcloud(words = rownames(EM_cluster), freq = EM_cluster$C4, min.freq = 0
 
 
 ![png](/assets/images/wordcloud.png)
-
-
-
-
-
-
-
-
-
