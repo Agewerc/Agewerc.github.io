@@ -11,16 +11,15 @@ categories:
 
 ## Introduction
 
-Recommender Systems are algorithms designed to make suggestions of items to users of a certain platform based on their previous patterns. They are used in the tech industry by companies such as Netflix, Youtube, Facebook, Amazon, Expedia, Spotfy and so on. 
-More recently, recommender systems have become more diffuse and are not limited to big tech companies but virtually every company can create its own system (with the right dataset). 
+Recommender Systems are algorithms designed to make suggestions of items to users of a certain platform based on their previous patterns. 
+They are used in the tech industry by companies such as Netflix, YouTube, Facebook, Amazon, Expedia, Spotify and so on. 
+More recently, recommender systems have become more diffuse and are not limited to big tech companies, but virtually every company can create its own system (with the right dataset).
 <br><br>
-The benefits of usign such systems are huge, as described [here](https://towardsdatascience.com/5-advantages-recommendation-engines-can-offer-to-businesses-10b663977673), [here](https://medium.com/@triconinfotech/improving-customer-engagement-with-recommender-systems-b423bdbb4e55) and [here](https://neoteric.eu/blog/how-to-boost-sales-with-a-recommender-system/).  In a nutshell, it can drive traffic, deliver personalized content, enhance customer engagement, increase sales and much more. <br>
-The architecture of the recommendation engine is dependent on the business domain and the attributes of the dataset at one's disposal. For instance, customers on Ebay frequently provide ratings for products scaling on 1 (unhappy) to 5 (very happy). Spotfy hold information of the gender of music one listens to. Uber eats should know what is your favorite type of food. Istagram has user patterns of likes in images. Such data sources document interactions between users and products (items). In addition, the platform may access personal information from users, such as their location, age, sex and so on. Not to mention the complete metadata of their items.
-
-There are three especially commom methods to design a recommender system. `Collaborative Filtering`, `Content-based Filtering` and `hybrid techniques`. Content-based systems aims to make recommendation based on some previous information about the customer and the products. For instance if Netflix knows you like drama movies it might recommend you movies of this gender. However, in a collaborative filtering approach it might simply ignore the gender of the movie. The features used in this case are exclusevely users rating patterns. For instance if you whatched 5 different series on Netflix and have rated 5 each of them, just like some other random user, than you might be interested to know what else he was rated as 5 stars. Hybrid systems make use of both techniques. 
+The benefits of using such systems are enormous, as described [here](https://towardsdatascience.com/5-advantages-recommendation-engines-can-offer-to-businesses-10b663977673), [here](https://medium.com/@triconinfotech/improving-customer-engagement-with-recommender-systems-b423bdbb4e55) and [here](https://neoteric.eu/blog/how-to-boost-sales-with-a-recommender-system/).  In a nutshell, it can drive traffic, deliver personalised content, enhance customer engagement, increase sales and much more. <br>
+The architecture of the recommendation engine is dependent on the business domain and the attributes of the dataset at one's disposal. For instance, customers on eBay frequently provide ratings for products scaling on 1 (unhappy) to 5 (very happy). Spotify holds information about the gender of music one listens to. Uber eats should know what your favourite type of food is. Instagram has user patterns of likes in images. Such data sources document interactions between users and products (items). In addition, the platform may access personal information from users, such as their location, age, sex and so on. Not to mention the complete metadata of their items.
+There are three especially common methods to design a recommender system:  `Collaborative Filtering`, `Content-based Filtering` and `hybrid techniques`. Content-based systems aim to make recommendations based on some previous information about the customer and the products. For instance, if Netflix knows you like drama movies, it might recommend you movies of this gender. However, in a collaborative filtering approach, it might simply ignore the gender of the film. The features used in this case are exclusively users rating patterns. For instance, if you watched five different series on Netflix and have rated five each of them, just like some other random user, then you might be interested to know what else he has rated as five stars. Hybrid systems make use of both techniques. 
 <br><br>
-in this project we will use of Alternating Least Square Matrix Factorization,a Collaborative Filtering algorithm. We will build a recommeder system for restaurants in the city of Toronto.
-
+In this project, we will use of Alternating Least Square Matrix Factorization, a Collaborative Filtering algorithm. We will build a recommender system for restaurants in the city of Toronto.
 
 #### Requirements:
 - Python 
@@ -64,15 +63,14 @@ sqlContext = SQLContext(sc)
 
 
 ### Dataset
-We will be working with yelp [dataset](https://www.kaggle.com/yelp-dataset/yelp-dataset). It constains millions of reviews of businessess across the world. We will limit ourselves with the restaurants in the city of Toronto, Canada. The relevant files for us are the following:
+We will be working with yelp [dataset](https://www.kaggle.com/yelp-dataset/yelp-dataset). It contains millions of reviews of businesses across the world. We will limit ourselves to the restaurants in the city of Toronto, Canada. The relevant files for us are the following:
 
 `yelp_academic_dataset_business.json:`Contains information about every review made every customer for every business (millions of reviews). <br>
 `yelp_academic_dataset_review.json:` Contains multiple characteristics from businesses such as `parking available`, `type of food`, etc. 
 
 ### Spark SQL
 
-Since we are working with json files we use the function `read.json`. It takes a json file and transform it to a dataframe. We use `sqlContext`from the module Spark SQL. Spark SQL is a Spark module for structured data processing. It allows use to perform SQL queries in dataframes such as `join`, `groupby` `select` and so on. 
-
+Since we are working with json files we use the function `read.json`. It takes a json file and transform it to a dataframe. We use `sqlContext`from the module Spark SQL. Spark SQL is a Spark module for structured data processing. It allows use to perform SQL queries in dataframes such as `join`, `groupby`, `select` and so on. 
 
 ```python
 df_business = sqlContext.read.json('../input/yelp-dataset/yelp_academic_dataset_business.json')
@@ -81,10 +79,8 @@ df_review = sqlContext.read.json('/kaggle/input/yelp-dataset/yelp_academic_datas
 
 ## Filter Rows and columns
 
-Our dataset contains many columns and most won't be used in this project. From the table `df_business` we want only the most important features of businesses such as the `id`, `name`, `stars`, `category` and so on. We are exclusevely interested in businesses that are restaurants and in the city of Toronto. Therefore we apply the function `filter` in the columns city and `category` to enforce this restriction. 
-
-From the table `df_review` we want only the reviews from the selected table above. We use an `inner join` of `df_review` and `df_business` to elimate all other businesses from the table reviews.
-
+Our dataset contains many columns, and most of them won't be used in this project. From the table `df_business`, we want only the essential features of businesses such as the `id`, `name`, `stars`, `category` and so on. We are exclusively interested in companies that are restaurants and in the city of Toronto. Therefore we apply the function filter in the columns city and category to enforce this restriction.
+From the table `df_review`, we want only the reviews from the selected table above. We use an `inner join` of `df_review` and `df_business` to eliminate all other businesses from the table reviews.
 
 
 
@@ -139,7 +135,7 @@ df_review.select(['business_id', 'user_id', 'stars']).show()
 ## Exploratory Data Analysis
 
 
-Lets have a quick visualisation of the data. We plot a histogram of the ratings from users. 
+Let's have a quick visualisation of the data. We plot a histogram of the ratings from users.
 
 However, to make visualisations we have to convert the data from dataframe (pyspark) to pandas. First we use the `.collect()` and later we extract the the values.
 
@@ -156,19 +152,10 @@ plt.xlabel('Rating')
 plt.style.use('seaborn-white')
 ```
 
-
-
-
-    Text(0.5, 0, 'Rating')
-
-
-
-
 ![png](/assets/images/Recommender-System_12_1.png)
 
 
-Quite generous public from Toronto. Most ratings are above 3. Now lets see the the distrubtion of ratings of each restaurants. 
-
+Quite generous public from Toronto. Most ratings are above 3. Now let's see the distribution of ratings of each restaurant.
 
 ```python
 restaurant_reviews = df_business.select('stars_restaurant').collect()
@@ -187,9 +174,8 @@ plt.style.use('seaborn-white')
 ![png](/assets/images/Recommender-System_14_0.png)
 
 
-Here were see a more normally distributed curve. Nevertheless most restaurants do pretty well.
-Now lets visualize what are the most popular type of restaurants in Toronto. What kind of food do they serve? We will create a wordcloud. 
-
+Here were see a more normally distributed curve. Aditionally we can see that most restaurants do pretty well in terms of average rating.
+Now let's visualise what the most popular type of restaurants in Toronto are. What kind of food do they serve? We will create a word cloud.
 
 ```python
 restaurant_categories = df_business.select('categories').collect()
@@ -228,10 +214,9 @@ plt.show()
 
 ## Convert String to index
 
-Before starting the modelling process we must convert all columns that will be used in the model to integer. This is compulsory for the ALS model from pyspark.  The columns that need to be converted are the `business_id` and `user_id`. 
+Before starting the modelling process, we must convert all columns that will be used in the model to integer. This is compulsory for the ALS model from PySpark. The columns that need to be converted are the `business_id` and `user_id`.
 
 We use the `StringIndexer` function imported in from `pyspark.ml.feature`. 
-
 
 ```python
 indexer = [StringIndexer(inputCol=column, outputCol=column+"_index") for column in ['business_id', 'user_id']]
@@ -239,12 +224,6 @@ pipeline = Pipeline(stages=indexer)
 transformed = pipeline.fit(df_review).transform(df_review)
 transformed.select(['business_id', 'user_id','business_id_index', 'user_id_index'])
 ```
-
-
-
-
-    DataFrame[business_id: string, user_id: string, business_id_index: double, user_id_index: double]
-
 
 
 ## Split Dataset in train and test
@@ -257,26 +236,22 @@ transformed.select(['business_id', 'user_id','business_id_index', 'user_id_index
 
 ## Create ALS model
 
-
-Alternating Least Square is a matrix factorization algorithm implemented in Apache Spark ML and built for a larges-scale collaborative filtering problems. 
-
+Alternating Least Square is a matrix factorisation algorithm implemented in Apache Spark ML and built for large-scale collaborative filtering problems.
 
 #### Matrix factorization (or decomposition)
 
-The basic idea is to decompose a matrix in smaller parts in the same way we can do for a number. For instance, we can say that the number four can be decomposed in two times two $(4 = 2 x 2)$. In the same way we can do a decomposition of a matrix. 
+The basic idea is to decompose a matrix in smaller parts in the same way we can do for a number. For instance, we can say that the number four can be decomposed in two times two (4 = 2 x 2). In the same way, we can do a decomposition of a matrix.
 
-Here is an example how can we decompose a matrix that has ratings for restaurants by clients:
+Here is an example of how can we decompose a matrix that has ratings for restaurants by clients:
 ![Presentatio4](/assets/images/Matrix_Factorization.jpg)
 
-If we are able to find the hidden matrices, we will be able to calculate the expected rating that every client will give to each restaurant. This is our goal with the algorith.
-
+If we are able to find the hidden matrices, we will be able to calculate the expected rating that every client will give to each restaurant. This is our goal with the algorithm.
 
 #### But how to find the hidden matrices? 
 
-The math in this process is extensive and is not our goal to discuss it in here. You can read it about in [here](https://blog.insightdatascience.com/explicit-matrix-factorization-als-sgd-and-all-that-jazz-b00e4d9b21ea). It is very a very similar process to the stochastic gradient descent. 
+The math in this process is extensive and is not our goal to discuss it in here. You can read it about in [here](https://blog.insightdatascience.com/explicit-matrix-factorization-als-sgd-and-all-that-jazz-b00e4d9b21ea). It is very a very similar process to the stochastic gradient descent.
 
-
-#### Parameters (from Apache [Spark](http://spark.apache.org/docs/2.2.0/ml-collaborative-filtering.html))
+#### Parameters (as described on Spark [website](http://spark.apache.org/docs/2.2.0/ml-collaborative-filtering.html))
 *- **numBlocks** is the number of blocks the users and items will be partitioned into in order to parallelize computation (defaults to 10).*<br>
 *- **rank** is the number of latent factors in the model (defaults to 10).*<br>
 *- **maxIter** is the maximum number of iterations to run (defaults to 10).*<br>
@@ -284,13 +259,6 @@ The math in this process is extensive and is not our goal to discuss it in here.
 *- **implicitPrefs** specifies whether to use the explicit feedback ALS variant or one adapted for implicit feedback data (defaults to false which means using explicit feedback).*<br>
 *- **alpha** is a parameter applicable to the implicit feedback variant of ALS that governs the baseline confidence in preference observations (defaults to 1.0).*<br>
 *- **nonnegative** specifies whether or not to use nonnegative constraints for least squares (defaults to false).*
-
-
-
-
-
-
-
 
 
 ```python
@@ -319,8 +287,9 @@ print("RMSE="+str(rmse))
     RMSE=1.3651734482322269
     
 
-Our model is doing pretty well. We have are guessing on a pretty good band with a 1.36 average squared error. Lets see an applied case of a recommendation for a customer.
+Our model is doing pretty well. We have achieved a 1.36 average squared error. Lets see an applied case of a recommendation for a customer.
 
+In future works we can include a step of parameter tunning as in [here](http://restanalytics.com/2019-02-27-Hyperparameter-Tuning-Alternating-Least-Squares-Recommender-System/).
 ## Visualize Recommendations
 
 Now we visualise recommendations for user 30 (could be any other). 
