@@ -420,7 +420,11 @@ res_hard <- EM(counts, K=4, max.epoch=10, soft = FALSE, seed = 200)
 label.hat.hard <- res_hard$k_max
 ```
 # Visualizing Clusters With PCA
-We normalize the count matrix for better visualization.
+We want to visualise the clusters, but we have 2347 variables. 
+It’s not possible to plot it directly; we need to reduce the number of dimensions, ideally to 2 or 3 so that we can get a good broad view of the patterns captured. 
+A popular and simple technique for dimensionality reduction is **PCA**. 
+I won’t derive the calculation of the principal components here, but, in a nutshell, it provides variables which keep the maximum amount of variation of the original dataset. 
+Here, we plot the first two principal components and normalize the data for better visualization.
 
 
 ```R
