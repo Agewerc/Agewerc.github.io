@@ -14,24 +14,24 @@ Find the detailed code and more about bootstrap in my [github](https://github.co
 
 ## Introduction to Bootstrap
 
-
-Bootstrap is a powerful tool widely by statisticians and data scientists to quantify uncertainty associated with estimated parameters in the context of statistical learning methods. 
-Bootstrap is the practice of estimating properties of an estimator, such as its standard-deviation and confidence interval, by measuring those properties when sampling from an approximating distribution. One standard choice for an approximating distribution is the empirical distribution function of the observed data. 
-In simple words, bootstrap is the practice of constantly repeating a modelling task, such as a linear regression, to estimate the variance of the parameters (betas) and consequently understand if they can be trusted or not. However, it would not make any sense to repeat such tasks with the same dataset, as the parameters would always return the equal, and the variance would be zero. Instead,  bootstrap consists of creating new fake/imaginary datasets, by sampling data with replacement from the dataset you are originally working with. 
-Some machine learning methods have already incorporated bootstrap into its algorithm, more notably Random Forests that use bagging (bootstrap aggregating) to reduce the complexity of models that overfit the training data.
-In this work, we will explore bootstrap with Regression and KNN examples. We will be doing a regression with a dataset from the year from 2015 with GDP-Per-Capita and life expectancy from most countries in the world. We want to model the relationship between these two variables. In the context of a bootstrap, the first step would be to create the mentioned fictitious datasets, as we can see in figure 1. 
+In Statistics, bootstrap is a resampling technique that can be used to estimate the true population data by generating sampled datasets with replacement. It is a powerful tool widely used by statisticians and data scientists to quantify the uncertainty associated with estimated parameters in the context of statistical learning methods. 
+If we want to account for the uncertainty of the parameters in a model, bootstrapping can help. Instead of using the complete data to estimate them once, we can repeat the process many times on the different samples generated with replacement to obtain a vector of estimates. Then, it becomes possible to estimate some statistical properties of the parameters, such as its standard-deviation and confidence intervals. 
+For instance, in linear regression, we can use bootstrap to estimate the variance of the coefficients (betas) and consequently understand how reliable are they. However, it would not make any sense to repeat such tasks with the same dataset, as the parameters would always return the equal, and the variance would be zero. Instead,  bootstrap consists of creating new resampled datasets. 
+Some machine learning methods have already incorporated bootstrap into its algorithm, more notably Random Forests, that use bagging (bootstrap aggregating) to reduce the complexity of models that overfit the training data.
+In this work, we will explore bootstrap with Regression and KNN examples. We will be doing a regression with a dataset from the year from 2015 with GDP-Per-Capita and life expectancy from most countries in the world. We want to model the relationship between these two variables. In the context of bootstrap, the first step would be to create the mentioned resampled datasets, as we can see in figure 1. 
 <br><br>
 
 
 <img src="/assets/images/bootstrap countries.png" alt="drawing" width="700"/>
 
-*FIGURE 1. A graphical illustration of the bootstrap approach on a dataset containing n = 168 observations. Each bootstrap data set contains n observations, sampled with replacement from the original data set. Each bootstrap data set is used to obtain an estimate of the parameters.*<br><br><br>
+*FIGURE 1. A graphical illustration of the bootstrap approach on a dataset containing n = 168 observations. Each bootstrap data set contains n observations, sampled with replacement from the original data set. Each bootstrap data set is used to obtain one estimate of the parameters which will compose the final vector/distribution.*<br><br><br>
 
-## Why Use Bootstrap
-Bootstrap may be used to construct hypothesis test and reject the effectiveness of a variable to explain the label. In a regression analysis, for instance, it is attempted to explore and model the relationship between two or more variables. However, a regression model , will always quantify some hypothetical mathematical relationship between variables, even though if it is not real. To eliminate the possibility of the variables not having a substantial relationship we may use bootstrap. In figure 2, we can see the distribution of parameters of a second-degree polynomial regression developed with the same dataset. 
+## Why Use Bootstrap in Regression Analysis
+Why would someone prefer bootstrap over the traditional approach for statistical inference? Because we could make wrong assumptions about the population and deriving the sampling distribution can be prohibitively difficult. Bootstrap allows us to estimate the sampling distribution of a statistic empirically without making assumptions about the form of the population, and without deriving the sampling distribution explicitly.
+In a regression analysis, for instance, it is attempted to explore and model the relationship between two or more variables. However, a regression model will always quantify some hypothetical mathematical relationship between variables, even if they are not significant. To eliminate the possibility of the variables not having a substantial relationship, we may use bootstrap. In Figure 2, we can see the distribution of parameters of a second-degree polynomial regression developed with the same dataset. 
 <br>
 ![bootstrap_plots](/assets/images/bootstrap_plots.png)
-*FIGURE 2. A graphical illustration of the distribution of the parameters of a polynomial regression of second degree and number of repetitions (n = 1000). The parameters follow a gaussian distribution.*<br>
+*FIGURE 2. A graphical illustration of the distribution of the parameters of a polynomial regression of second degree and the number of repetitions (n = 1000). The parameters follow a gaussian distribution.*<br>
 
 ## Logic
 The logic of bootstrap is quite simple and can be captured in simple lines of code, or pseudocode. In the end, it comes down to repeatedly perform a task with random samples. 
@@ -99,12 +99,12 @@ F-statistic: 125.5 on 2 and 158 DF,  p-value: < 2.2e-16
 ```
 
 
-Our regressions seems to have a good fit. Our parameters have statistical significance and we have found a satisfactory adjusted R-squared. Lets plot the line in the dataset.<br>
+Our regressions seem to have a good fit. Our parameters have statistical significance, and we have found a satisfactory adjusted R-squared. Let's plot the line in the dataset.<br>
 
 ![bootstrap_regre](/assets/images/bootstrap_pregression.png)
 
 
-When making a prediction we do not want to be limited to the point of our model. We want to find a confidence interval.  We will find the confidence interval creating bootstrapped models. First lets make a plot with n models. 
+When making a prediction, we do not want to be limited to the point of our model. We want to find a confidence interval.  We will find the confidence interval creating bootstrapped models. First let's make a plot with n models. 
 
 <img src="/assets/images/bootstrap_cover.png" alt="drawing" width="1000"/>
 
