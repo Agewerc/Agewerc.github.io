@@ -3,6 +3,7 @@
         var defualts = {
              tag:"tag"
             ,ballSize:200
+			,resize: true
         };
         var opts = $.extend({}, defualts, options);
         var tagEle = "querySelectorAll" in document ? document.querySelectorAll("."+opts.tag) : getClass(opts.tag),
