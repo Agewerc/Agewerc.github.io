@@ -31,7 +31,7 @@ Some of the units available in the program were “Machine Learning”, “Data 
 Researches from the department of the university were modelling outcomes of soccer games, the spread of epidemics and the behaviour of the stock market. 
 I was presented to many of the professors of the University staff. 
 They were friendly and explained to me with surprising confidence how their field (of modelling) was going to transform society over the next years. 
-They were undoubtedly right.  If you are interested, this is the [program] (https://emap.fgv.br/mestrado/modelagem-matematica) (in Portuguese). <br><br>
+They were undoubtedly right.  If you are interested, this is the [program](https://emap.fgv.br/mestrado/modelagem-matematica) (in Portuguese). <br><br>
 I felt doing the master could be an excellent opportunity for self-development and to dive deep in this exciting new world. 
 However, at that moment, I had not even finished my degree in economics. 
 I was actually in my last semester and working on the graduation project. 
