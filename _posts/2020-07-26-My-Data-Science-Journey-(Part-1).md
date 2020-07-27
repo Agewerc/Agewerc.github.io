@@ -2,7 +2,7 @@
 title: My Data Science Journey Part 1
 date:   2020-07-16 20:12:00 +1000
 layout: post
-image: /assets/images/journey.JPG
+image: /assets/images/journey.jpg
 author: Alan Gewerc
 categories:
     - work
