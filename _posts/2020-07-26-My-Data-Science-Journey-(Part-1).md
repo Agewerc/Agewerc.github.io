@@ -8,7 +8,7 @@ categories:
     - work
     - projects
 ---
-
+<p style='text-align: justify;'> 
 The first time I heard the term data science was in a conversation with a fellow intern at a Private Equity firm. 
 He had just decided to leave the company and came to say goodbye. I asked him why he was leaving, and we started a long conversation. 
 It was in Rio de Janeiro, Brazil, in December 2015. He told me he was starting a Master of Mathematical Modelling in the following week. 
@@ -39,3 +39,4 @@ I had a few years of experience working with finance as an intern in financial m
 And to make things more complicated, I had just received an offer to work in one of the largest retail companies in Brazil, a great opportunity. 
 To avoid making decisions in a rush that I could regret on the future, I decided to take it slow. 
 I accepted the job offer, but I knew that my data science journey had just begun. 
+</p>
