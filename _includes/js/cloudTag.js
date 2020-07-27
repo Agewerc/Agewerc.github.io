@@ -2,14 +2,13 @@
     $.fn.cloudTag = function (options) {
         var defualts = {
              tag:"tag"
-            ,ballSize:200
-			,resize: true
+            ,ballSize:400
         };
         var opts = $.extend({}, defualts, options);
         var tagEle = "querySelectorAll" in document ? document.querySelectorAll("."+opts.tag) : getClass(opts.tag),
             paper = $(this)[0];
             RADIUS =opts.ballSize,
-            fallLength = 300,
+            fallLength = 350,
             tags=[],
             angleX = Math.PI/fallLength,
             angleY = Math.PI/fallLength,
@@ -61,7 +60,7 @@
                 tags.forEach(function(){
                     this.move();
                 })
-            } , 17)
+            } , 25)
         }
 
         if("addEventListener" in window){
