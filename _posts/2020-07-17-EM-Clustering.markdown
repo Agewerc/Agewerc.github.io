@@ -89,7 +89,7 @@ $$p(d_1,...d_N)=\prod _{n=1}^{N}p(d_n)=\prod _{n=1}^{N}\sum _{k=1}^{K}p(z_{n,k}=
 Applying the log in the equation above it yields:
 $$ln\ p(d_1,...d_N)=\sum _{n=1}^{N}ln\ p(d_n)=\sum _{n=1}^{N}ln\sum _{k=1}^{K}p(z_{n,k}=1,d_n)=\sum _{n=1}^{N}ln\sum _{k=1}^{K}\left ( \varphi _{k}\prod _{w\in\mathcal{A}}\mu_{k,w}^{c(w,d_n)} \right )$$  
 
-And the $\mathcal{Q}$ function (that is the basis of the EM algorithm) takes the form of:
+And the $$\mathcal{Q}$$ function (that is the basis of the EM algorithm) takes the form of:
 $$\mathcal{Q}\left ( \theta,\theta^{old} \right ):=\sum _{n=1}^{N}\sum _{k=1}^{K}p(z_{n,k}=1|d_n,\theta^{old})\ ln\ p(z_{n,k}=1,d_n|\theta)\\
 \\=\sum _{n=1}^{N}\sum _{k=1}^{K}p(z_{n,k}=1|d_n,\theta^{old})\left ( ln\varphi _k + \sum _{w\in\mathcal{A}}{c(w,d_n)}\ ln\  \mu_{k,w}\right )\\
 =\sum _{n=1}^{N}\sum _{k=1}^{K}\gamma (z_{n,k})\left ( ln\varphi _k + \sum _{w\in\mathcal{A}}{c(w,d_n)}\ ln\ \mu_{k,w}\right )\\
@@ -97,7 +97,7 @@ $$
 
 where $$\gamma (z_{n,k}):= p(z_{n,k}=1 \| d_n,\theta^{old})$$ are the responsability factors.
 
-Maximizing the $\mathcal{Q}$ function using the Lagrangian to enforce the constraints (1) and (2) above, and setting the derivatives to zero leads to the following solutions for the parameters:
+Maximizing the $$\mathcal{Q}$$ function using the Lagrangian to enforce the constraints (1) and (2) above, and setting the derivatives to zero leads to the following solutions for the parameters:
 * $$\varphi_k=\frac{N _k}{N}$$ where $$N_k := \sum _{n=1}^{N}\gamma (z_{n,k}) $$ (3) being the cluster proportion
 * $$\mu_{k,w}=\frac{\sum _{n=1}^{N}\gamma (z_{n,k})c(w,d_n)}{\sum _{w'\in\mathcal{A}} \sum _{n=1}^{N}\gamma (z_{n,k})c(w',d_n)}$$ (4) being the word proportion for each cluster  
 
@@ -109,17 +109,17 @@ Thus, the EM Algorithm to learn the parameters and find the best values for the 
 In the case of **hard-EM algorithm**, each data is assigned to the class with the largest posterior probability. Thus:  
 $$ Z^{*} = argmax_z\ \gamma (z_{n,k})= argmax_z\ p(z_{n,k}=1|d_n,\theta^{old})$$
 
-And there is no expectation in over the latent variables in the definition of the $\mathcal{Q}$ function. Thus:
+And there is no expectation in over the latent variables in the definition of the $$\mathcal{Q}$$ function. Thus:
 $$\mathcal{Q}(\theta,\theta^{old})= \sum _{n=1}^{N} ln\ p(z_{n,k=Z^*}=1,d_n|\theta)$$
 
 2) While the convergence (stop condition) is not met: 
 
-* **Expectation (E) step:** based on the current values for the parameters $\theta^{old} := (\varphi^{old},\mu_1^{old},...,\mu_K^{old})$ we will set $\forall n$ and $\forall k$ a $Z^*$ such as:   
+* **Expectation (E) step:** based on the current values for the parameters $$\theta^{old} := (\varphi^{old},\mu_1^{old},...,\mu_K^{old})$$ we will set $$\forall n$$ and $$\forall k$$ a $$Z^*$$ such as:   
 
 $$ Z^{*} \leftarrow  argmax_z\ \gamma (z_{n,k})= argmax_z\ p(z_{n,k}=1|d_n,\theta^{old})$$
 
         
-* **Maximization (M) step:** based on the result of $ Z^{*}$ calculated on the **E-step** above, we re-estimate the values of parameters $(\varphi_k,\mu_{k,w})$ to calculate the $\theta^{new}$ using the equations (3) and (4) above:  
+* **Maximization (M) step:** based on the result of $ Z^{*}$ calculated on the **E-step** above, we re-estimate the values of parameters $$(\varphi_k,\mu_{k,w})$$ to calculate the $$\theta^{new}$$ using the equations (3) and (4) above:  
 
 $$\theta^{new} \leftarrow argmax_\theta\ \mathcal{Q}(\theta,\theta^{old})= argmax_\theta \sum _{n=1}^{N} ln\ p(z_{n,k=Z^*}^{*}=1,d_n|\theta)\\
 = argmax_\theta\ \sum _{n=1}^{N}\left (ln\varphi _{k=Z^*} + \sum _{w\in\mathcal{A}}{c(w,d_n)}ln\ \mu_{k=Z^*,w}\right )$$
