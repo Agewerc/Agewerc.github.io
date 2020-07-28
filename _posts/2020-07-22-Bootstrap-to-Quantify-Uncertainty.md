@@ -106,7 +106,7 @@ Our regressions seem to have a good fit. Our parameters have statistical signifi
 
 When making a prediction, we do not want to be limited to the point of our model. We want to find a confidence interval.  We will find the confidence interval creating bootstrapped models. First let's make a plot with n models. 
 
-<img src="/assets/images/bootstrap_cover.png" alt="drawing" width="1000"/>
+<img src= "/assets/images/bootstrap_cover.PNG" alt="drawing" width="1000"/>
 
 
 ### Model Parameters

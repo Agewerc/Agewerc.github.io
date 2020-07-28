@@ -1,5 +1,5 @@
 ---
-title: My Data Science Journey Part 1
+title: My Data Science Journey
 date:   2020-07-16 20:12:00 +1000
 layout: post
 image: /assets/images/journey.jpg
@@ -8,6 +8,8 @@ categories:
     - work
     - projects
 ---
+
+### Getting in Touch With Data Science
 <p style='text-align: justify;'> 
 The first time I heard the term data science was in a conversation with a fellow intern at a Private Equity firm. 
 He had just decided to leave the company and came to say goodbye. I asked him why he was leaving, and we started a long conversation. 
@@ -40,3 +42,7 @@ And to make things more complicated, I had just received an offer to work in one
 To avoid making decisions in a rush that I could regret on the future, I decided to take it slow. 
 I accepted the job offer, but I knew that my data science journey had just begun. 
 </p>
+
+### The effort to Learn
+
+
