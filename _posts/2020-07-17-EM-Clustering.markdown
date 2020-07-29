@@ -104,7 +104,7 @@ Maximizing the $$\mathcal{Q}$$ function using the Lagrangian to enforce the cons
 
 Thus, the EM Algorithm to learn the parameters and find the best values for the latent variables will follow these steps:
 
-1) Choose an initial setting for the parameters $\theta^{old} := (\varphi^{old},\mu_1^{old},...,\mu_K^{old})$  
+1) Choose an initial setting for the parameters $$\theta^{old} := (\varphi^{old},\mu_1^{old},...,\mu_K^{old})$$
 
 In the case of **hard-EM algorithm**, each data is assigned to the class with the largest posterior probability. Thus:  
 $$ Z^{*} = argmax_z\ \gamma (z_{n,k})= argmax_z\ p(z_{n,k}=1|d_n,\theta^{old})$$
@@ -119,7 +119,7 @@ $$\mathcal{Q}(\theta,\theta^{old})= \sum _{n=1}^{N} ln\ p(z_{n,k=Z^*}=1,d_n|\the
 $$ Z^{*} \leftarrow  argmax_z\ \gamma (z_{n,k})= argmax_z\ p(z_{n,k}=1|d_n,\theta^{old})$$
 
         
-* **Maximization (M) step:** based on the result of $ Z^{*}$ calculated on the **E-step** above, we re-estimate the values of parameters $$(\varphi_k,\mu_{k,w})$$ to calculate the $$\theta^{new}$$ using the equations (3) and (4) above:  
+* **Maximization (M) step:** based on the result of $$ Z^{*}$$ calculated on the **E-step** above, we re-estimate the values of parameters $$(\varphi_k,\mu_{k,w})$$ to calculate the $$\theta^{new}$$ using the equations (3) and (4) above:  
 
 $$\theta^{new} \leftarrow argmax_\theta\ \mathcal{Q}(\theta,\theta^{old})= argmax_\theta \sum _{n=1}^{N} ln\ p(z_{n,k=Z^*}^{*}=1,d_n|\theta)\\
 = argmax_\theta\ \sum _{n=1}^{N}\left (ln\varphi _{k=Z^*} + \sum _{w\in\mathcal{A}}{c(w,d_n)}ln\ \mu_{k=Z^*,w}\right )$$
