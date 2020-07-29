@@ -66,15 +66,24 @@ There are many good masters of Data Science worldwide, but way less than other w
 Law or Economics. For instance, in my home country, Brazil, there was none. Not exclusively focused on Data Science. 
 The more advanced countries in the education of Data Science (in 2018) are the U.S, U.K and Australia. 
 Some of the topics I was concerned when applying were the following:
--	What to do if you do not have IT background?
--	How long will the course take?
--	What technologies will I learn?
--	What is the reputation of the University?
-I found a total of 31 masters worldwide in which I felt I had a good fit. I spent one month entirely focused on making my applications: cover letters, recommendations from previous lectures and much more. I was fortunate enough to be approved in most applications. My choice was the Master of Data Science from Monash University in Australia.  
+<ul>
+  <li>What to do if you do not have IT background?</li>
+  <li>How long will the course take?</li>
+  <li>What technologies will I learn?</li>
+  <li>What is the reputation of the University?</li>
+</ul>
+	I found a total of 31 masters worldwide in which I felt I had a good fit. 
+	I spent one month entirely focused on making my applications: cover letters, recommendations from previous lectures and much more. 
+	I was fortunate enough to be approved in most applications. My choice was the Master of Data Science from Monash University in Australia.  
 </p>
 
 
 
+## Doing a Master of Data Science
+I couldn’t be happier with my decision. 
+I am learning so much that I would never learn in 10 years studying by myself. 
+I am currently in my last semester, and I am feeling 100% prepared to be a Data Scientist. 
+Monash is a fantastic university, and the course is very well structured. When I finish the program, I will be back to write a whole article about it. 
 
 
 
