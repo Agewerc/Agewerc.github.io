@@ -49,8 +49,8 @@ I decided to do my best to learn Data Science by myself. My first action was to 
 The same University in which I decided not to do the master was also offering a one-year extension Data Science course. I also enrolled. <br>
 In my new job, I was initially working primarily with finance and using spreadsheets. However, I was eager to use and implement some of this new knowledge In development. 
 It was a fertile terrain. In the area, we were working with massive datasets, that had all financial transactions and accounting data of the company—billions of data points monthly.
-The routines on the area were done manually in Excel and took many hours to finalized every day. <br>
-However, it felt there was resistance to change. For most big corporations that do not come from the tech sector, the adaptation for this new era is slow. 
+The routines on the area were done manually in Excel and took many hours to finalize every day. <br>
+However, there was resistance to change. For most big corporations that are from the tech sector, the adaptation for this new era is slow. 
 They have most of their workers skilled in some tools which are not the latest technologies, and most people are reluctant to change. Sometimes even the leadership of the company. 
 Even though I had a supportive manager who was interested, the process to accelerate change was slow. <br>
 I did have the chance to develop new things for the area such as new dashboards and reports, but I just felt a lot more was possible. 
@@ -63,7 +63,7 @@ So before I even had the chance of being relocated to inside the company, I made
 ## Finding the perfect course
 <p style='text-align: justify;'> 
 There are many good masters of Data Science worldwide, but way less than other well-established topics such as Computer Science, 
-Law or Economics. For instance, in my home country, Brazil, there was none. Not exclusively focused on Data Science. 
+Law or Economics. For instance, in my home country, Brazil, there was none. At least, no course exclusively focused on Data Science. 
 The more advanced countries in the education of Data Science (in 2018) are the U.S, U.K and Australia. 
 Some of the topics I was concerned when applying were the following:
 <ul>
@@ -73,7 +73,7 @@ Some of the topics I was concerned when applying were the following:
   <li>What is the reputation of the University?</li>
 </ul>
 	I found a total of 31 masters worldwide in which I felt I had a good fit. 
-	I spent one month entirely focused on making my applications: cover letters, recommendations from previous lectures and much more. 
+	I spent one month entirely focused on making my applications: cover letters, recommendations from previous lecturers and much more. 
 	I was fortunate enough to be approved in most applications. My choice was the Master of Data Science from Monash University in Australia.  
 </p>
 
@@ -81,7 +81,7 @@ Some of the topics I was concerned when applying were the following:
 
 ## Doing a Master of Data Science
 I couldn’t be happier with my decision. 
-I am learning so much that I would never learn in 10 years studying by myself. 
+I am learning so much! I would never learn in 10 years the same just studying by myself. 
 I am currently in my last semester, and I am feeling 100% prepared to be a Data Scientist. 
 Monash is a fantastic university, and the course is very well structured. When I finish the program, I will be back to write a whole article about it. 
 
