@@ -32,7 +32,7 @@ expect the mode to yield similar results every time, otherwise it might indicate
 Concerning a regression model, we can calculate the parameters of the betas and intercept such as the mean and standard deviation. A high standard deviation will indicate a
 problem in the confidence of the model. In the ideal cenario, the parameters will show a normal distribution. 
  
- ## Algorithm
+## Algorithm
 The logic of bootstrap is quite simple and can be captured in simple lines of code, or pseudocode. In the end, it comes down to repeatedly perform a task with random samples (with replacement). 
 <img src="/assets/images/bootstrap_algorithm.png" alt="drawing" width="700"/><br>
 *FIGURE 3. The Bootstrap algorithm*
@@ -109,12 +109,13 @@ Our regressions seem to have a good fit. Our parameters have statistical signifi
 ![bootstrap_regre](/assets/images/bootstrap_pregression.png)
 
 
-When making a prediction, we do not want to be limited to the point of our model. We want to find a confidence interval.  We will find the confidence interval creating bootstrapped models. First let's make a plot with n models. 
+When making a prediction, we do not want to be limited to the point of our model. We want to find a confidence interval.  We will find the confidence interval creating bootstrapped models.
+First let's make a plot with n models, where n equals 10 and 100. 
 
 <img src= "/assets/images/bootstrap_cover.PNG" alt="drawing" width="1000"/>
 
 
-### Model Parameters
+## Model Parameters
 
 Making use of every model above we have found or model parameters and their statistical distribution. 
 Lets plot the data of every beta and intercept. 
@@ -124,16 +125,14 @@ Lets plot the data of every beta and intercept.
 <br><br>
 
 
-### The Distribution of the Betas
-
-We have cal
+#### The Distribution of the Betas
 
 
 ![bootstrap_plots](/assets/images/bootstrap_plots.png)
 *FIGURE 2. A graphical illustration of the distribution of the parameters of a polynomial regression of second degree and the number of repetitions (n = 1000). The parameters follow a gaussian distribution.*<br>
 
 
-Now lets plot the regression.
+Now lets plot the regression with upper and lower lines - a condidence interval of 95%.
 
 <br><br>
 
@@ -141,3 +140,6 @@ Now lets plot the regression.
 # Bootstraped Model with Confidence Interval<br>
 ![bootstrap_r](/assets/images/bootstrap_final.png)
 
+
+<br><br>
+That's all for now, thanks for reading!
