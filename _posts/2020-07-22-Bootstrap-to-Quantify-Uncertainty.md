@@ -137,8 +137,8 @@ Now lets plot the regression with upper and lower lines - a condidence interval 
 <br><br>
 
 
-# Bootstraped Model with Confidence Interval<br>
-![bootstrap_r](/assets/images/bootstrap_final.png)
+# Bootstraped Model with Confidenc	e Interval<br>
+<img src= "/assets/images/bootstrap_final.png" alt="drawing" width="650"/>
 
 
 <br><br>
