@@ -90,17 +90,16 @@ compress_html:
   profile: false
   startings: []
 
-
-
-
 collections:
     projects:
+        output: true
+        permalink: /projects/:path/
+    visualisations:
         output: true
         permalink: /projects/:path/
 
 exclude:
     - .git
-
 
 # These plugins are supported by github by default and can be installed locally using ruby gems
 plugins:
