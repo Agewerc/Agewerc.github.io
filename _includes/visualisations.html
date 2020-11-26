@@ -1,12 +1,9 @@
-<h2 class="m0a"> Data Visualisation (Shiny Apps) </h2>
+<h2 class="m0a" data-aos="fade-up">Data Visualisation </h2>
 <div class="projects">
   {% for item in site.visualisations %}
-  <a href="{{item.url}}" class="nostyle p-3">
+  <a href="{{item.github}}" class="nostyle p-3" target="_blank">
     <div class="project borders cards" data-aos="fade-up">
-      <div
-        class="project-image"
-        style="background-image: url({{item.image}})"
-      ></div>
+      <div class="project-image" style="background-image: url({{item.image}})"></div>
       <p class="title text-center">{{item.title}}</p>
     </div>
   </a>
