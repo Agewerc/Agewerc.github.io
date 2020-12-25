@@ -277,7 +277,7 @@ a.nostyle {
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
   @include media-query($on-palm) {
     display: block;
@@ -297,6 +297,13 @@ a.nostyle {
   .title {
     margin: 10px;
   }
+  
+  .keywords {
+    margin: 5px;
+	color: DarkGreen;
+	font-weight: bold;
+  }
+  
 }
 
 .work {

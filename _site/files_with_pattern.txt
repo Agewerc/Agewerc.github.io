@@ -1,0 +1,10 @@
+_includes/blogs.html
+_includes/projects.html
+_includes/visualisations.html
+_site/assets/css/main-blue.css
+_site/assets/css/main-default.css
+_site/assets/css/main-orange.css
+_site/assets/css/main-pink.css
+_site/assets/css/main-purple.css
+_site/index.html
+assets/css/_sass/_style.scss
